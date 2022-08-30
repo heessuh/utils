@@ -4,17 +4,18 @@ const myUsers = {
   userList: [],
 }
 
-const getUsers = async () => {
+/* const getUsers = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users")
   const data = await response.json()
   return data
 }
 
-const anotherFunc = async () => {
+getUsers() */
+/* const anotherFunc = async () => {
   const users = await getUsers()
   myUsers.userList = users
   console.log(myUsers)
-}
+} */
 
 //anotherFunc()
 
@@ -26,7 +27,7 @@ const getUserEmail = async () => {
   const userEmail = data.map((user) => user.email)
   // console.log first 3 emails
 
-  console.log(userEmail.slice(0, 3))
+  console.log(userEmail.slice(0, 5))
 }
 
 getUserEmail()

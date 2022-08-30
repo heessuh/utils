@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript addEventListener()</h2>
+
+    <p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+    <button>Click To Generate Random Color</button>
+
+    <p id="demo"></p>
+
+    <script>
+      const btn = document.querySelector("button") //choose the button
+
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1))
+      }
+      // assign random number rgb color selector
+      btn.addEventListener("click", () => {
+        const rndCol = `RGB(${random(255)}, ${random(255)}, ${random(255)})`
+        document.getElementById("demo").innerHTML = "This color has  " + rndCol
+        document.body.style.backgroundColor = rndCol
+      })
+    </script>
+  </body>
+</html>
