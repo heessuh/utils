@@ -10,33 +10,22 @@
     <p id="demo"></p>
 
     <script>
-      /*  var x = document.getElementById("myBtn") */
-      /*  x.addEventListener("mouseover", myFunction) */
-      /*  x.addEventListener("click", mySecondFunction) */
-      /*  x.addEventListener("mouseout", myThirdFunction) */
+      var x = document.getElementById("myBtn")
+      x.addEventListener("mouseover", myFunction)
+      x.addEventListener("click", mySecondFunction)
+      x.addEventListener("mouseout", myThirdFunction)
 
-      /*  function myFunction() { */
-      /*    document.getElementById("demo").innerHTML += "Moused over!<br>" */
-      /*  } */
-
-      /*  function mySecondFunction() { */
-      /*    document.getElementById("demo").innerHTML += "Clicked!<br>" */
-      /*  } */
-
-      /*  function myThirdFunction() { */
-      /*    document.getElementById("demo").innerHTML += "Moused out!<br>" */
-      /*  } */
-
-      const btn = document.querySelector("button") //choose the button
-
-      function random(number) {
-        return Math.floor(Math.random() * (number + 1))
+      function myFunction() {
+        document.getElementById("demo").innerHTML += "Moused over!<br>"
       }
-      // assign random number rgb color selector
-      btn.addEventListener("click", () => {
-        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`
-        document.body.style.backgroundColor = rndCol
-      })
+
+      function mySecondFunction() {
+        document.getElementById("demo").innerHTML += "Clicked!<br>"
+      }
+
+      function myThirdFunction() {
+        document.getElementById("demo").innerHTML += "Moused out!<br>"
+      }
     </script>
   </body>
 </html>
